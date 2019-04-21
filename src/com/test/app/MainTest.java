@@ -7,11 +7,12 @@ public class MainTest {
         System.out.println("Hi");
 
         WarmupOne one = new WarmupOne();
-        boolean weekday, vacation;
 
         one.sleepIn(true, false);
         System.out.println(one.sleepIn(true, false));
 
-
+        ArrayOne two = new ArrayOne();
+        int[] nums = {1,2,3,4};
+        System.out.println(two.double23(nums));
     }
 }

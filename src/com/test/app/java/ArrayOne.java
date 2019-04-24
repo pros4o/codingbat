@@ -183,6 +183,16 @@ public class ArrayOne {
     }
     
     //22 task
+    public int[] midThree(int[] nums) {
+      if (nums.length == 3) return nums;
+      int temp[] = new int[3];
+      int i = nums.length / 2;
+      temp[0] = nums[i - 1];
+      temp[1] = nums[i];
+      temp[2] = nums[i + 1];
+      return temp;
+    }
+    
     //23 task
     public int maxTriple(int[] nums) {
       int max = nums[0];
@@ -196,8 +206,39 @@ public class ArrayOne {
     }
 
     //24 task
+    public int[] frontPiece(int[] nums) {
+      if (nums.length < 2) return nums;
+      int[] temp = new int [2];
+      for (int i = 0; i < 2; i++) {
+        temp[i] = nums[i];
+      }
+      return temp;
+    }
+
     //25 task
+    public boolean unlucky1(int[] nums) {
+      for(int i = 0; i<nums.length - 1; i++) {
+        if (nums[i] == 1 && nums[i+1] == 1 && nums[i+2] == 1 && nums[nums.length - 1] != 3) return false;
+        if (nums[i] == 1 && nums[i+1] == 3) return true;
+      }
+      return false;
+    }
+    
     //26 task
+    public int[] make2(int[] a, int[] b) {
+      int[] temp = new int [2];
+      int some = 0;
+      for (int i = 0; i < 2; i++) {
+        if (i < a.length) {
+          temp[i] = a[i];  
+        } else {
+          temp[i] =b[some];
+          some++;
+        }
+      }
+      return temp;
+    }
+
     //27 task
     public int[] front11(int[] a, int[] b) {
       int[] c = new int[1];

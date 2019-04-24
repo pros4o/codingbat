@@ -121,13 +121,80 @@ public class ArrayOne {
     }
 
     //16 task
+    public int[] fix23(int[] nums) {
+      for(int i = 0; i < nums.length; i++) {
+        if (nums[i] == 2 && nums[i+1] == 3) {
+          nums[i + 1] = 0;
+          break;
+        }
+      }
+      return nums;
+    }
+
     //17 task
+    public int start1(int[] a, int[] b) {
+      int count = 0;
+      if (a.length != 0 && a[0] == 1) count++;
+      if (b.length != 0 && b[0] == 1) count++;
+      return count;
+    }
+
     //18 task
+    public int[] biggerTwo(int[] a, int[] b) {
+      if((a[0] + a[1]) >= (b[0] + b[1])) {
+        return a;
+      }
+      return b;
+    }
+
     //19 task
+    public int[] makeMiddle(int[] nums) {
+      int[] a;
+      if (nums.length %2 == 0) {
+          a = new int[2];
+          a[0] = nums[(nums.length/2) - 1];
+          a[1] = nums[nums.length/2];
+      } else {
+          a = new int[1];
+          a[0] = nums[nums.length/2];
+      }
+      return a;
+    }
+  
     //20 task
+    public int[] plusTwo(int[] a, int[] b) {
+      int[] c = new int[a.length + b.length];
+      for(int i = 0; i < c.length; i++) {
+        if(i<a.length) {
+          c[i] = a[i];
+        } else {
+          c[i] = b[i-a.length];
+        }
+      }
+      return c;
+    }
+    
     //21 task
+    public int[] swapEnds(int[] nums) {
+      int temp = nums[0];
+      nums[0] = nums[nums.length - 1];
+      nums[nums.length - 1] = temp;
+      return nums;
+    }
+    
     //22 task
     //23 task
+    public int maxTriple(int[] nums) {
+      int max = nums[0];
+      if (max < nums[nums.length - 1]) {
+        max = nums[nums.length - 1];
+      }
+      if (max < nums[nums.length / 2]) {
+        max = nums[nums.length/2];
+      }
+      return max;
+    }
+
     //24 task
     //25 task
     //26 task

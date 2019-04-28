@@ -109,7 +109,7 @@ public class WarmupOne {
       String last = str.substring(str.length() - 1);
       return last + str + last;
     }
-    
+
     //14 task
     public boolean or35(int n) {
         if (n%3==0 || n%5==0) return true;
@@ -117,18 +117,93 @@ public class WarmupOne {
       }
       
     //15 task
+    public String front22(String str) {
+      if (str.length() < 2) return str + str + str;
+      String first = str.substring(0,2);
+      return first + str + first;
+    }
+
     //16 task
+    public boolean startHi(String str) {
+      if(str.length() >= 2 && str.substring(0,2).equals("hi")) return true;
+      return false;
+    }
+
     //17 task
+    public boolean icyHot(int temp1, int temp2) {
+      if ((temp1<0 || temp1>100) && (temp2<0 || temp2>100)) {
+      if ((temp1>100 || temp2>100) && (temp1<0 ||temp2<0)) return true;
+      }
+      return false;
+    }
+  
     //18 task
+    public boolean in1020(int a, int b) {
+      if (a >= 10 && a<=20 || b >= 10 && b <= 20 ) return true;
+      return false;
+    }
+
     //19 task
+    public boolean hasTeen(int a, int b, int c) {
+      if (a>=13 && a<=19 || b>=13 && b<=19 || c>=13 && c<=19) return true;
+      return false;
+    }
+    
     //20 task
+    public boolean loneTeen(int a, int b) {
+      boolean s1,s2;
+      s1 = a>=13 && a<=19;
+      s2 = b>=13 && b<=19;
+      if (s1 && s2) return false;
+      else if (s1 && !s2 || !s1 && s2) return true;
+      return false;
+    }
+
     //21 task
+
     //22 task
+    public boolean mixStart(String str) {
+      if (str.length() > 2 && str.substring(1,3).equals("ix")) return true;
+      return false;
+    }
+
     //23 task
     //24 task
+    public int intMax(int a, int b, int c) {
+      if (a>b && a>c) return a;
+      else if (b>a && b>c) return b;
+      else return c;
+    }
+
     //25 task
+    public int close10(int a, int b) {
+      if (Math.abs(10-a)==Math.abs(10-b)) return 0;
+      else if (Math.abs(10-a)>Math.abs(10-b)) return b;
+      else return a;
+    }
+    
     //26 task
+    public boolean in3050(int a, int b) {
+      if (a>=30 && a<=40 && b>=30 && b<=40) return true;
+      if (a>=40 && a<=50 && b>=40 && b<=50) return true;
+      return false;
+    }
+
     //27 task
+    public int max1020(int a, int b) {
+      if (a>=10 && a<=20 || b>=10 && b<=20) {
+      if (a<b) {
+      if (b>20 || b<10) return a;
+          return b;
+      }
+      if (a>b) {
+      if (a>20 || a<10) return b;
+          return a;
+      }
+     } 
+      return 0;
+    }
+    
     //28 task
     public boolean stringE(String str) {
       int count = 0;
